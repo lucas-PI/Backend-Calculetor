@@ -4,22 +4,24 @@ public enum Operacoes {
 
     ADICAO("+"){
       @Override
-      public void operacao(int num1, int num2){
-        num1 + num2
+      public double operacao(double num1, double num2){
+        return num1 +num2;
       }
     },
 
     SUBTRACAO("-"){
         @Override
-        public void operacao(int num1, int num2){
-
+        public double operacao(double num1, double num2){
+            return num1 - num2;
         }
     },
 
     MULTIPLICACAO("*"){
         @Override
-        public void operacao(int num1, int num2){
+        public double operacao(double num1, double num2){
+            return num1 * num2
 
+                    ;
         }
     };
 
@@ -43,5 +45,5 @@ public enum Operacoes {
         return null;
     }
 
-    public abstract void operacao(int num1,int num2);
+    public abstract double operacao(double num1,double num2);
 }
