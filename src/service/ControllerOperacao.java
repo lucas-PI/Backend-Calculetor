@@ -20,12 +20,13 @@ public class ControllerOperacao {
         calculadora.setIdentificador(input.next());
         System.out.print("num2: ");
         calculadora.setNum2(input.nextDouble());
-        escolhaOperacao();
-        System.out.println(calculadora.getTipoOperacao());
+        escolhaOperacaoAndExecute();
+        System.out.println(calculadora.getRes());
     }
 
-    public  void escolhaOperacao(){
+    public  void escolhaOperacaoAndExecute(){
         calculadora.setTipoOperacao(Operacoes.selectOperacao(calculadora.getIdentificador()));
+        calculadora.setRes(calculadora.getTipoOperacao().operacao(calculadora.getNum1(),calculadora.getNum2()));
 
     }
 
