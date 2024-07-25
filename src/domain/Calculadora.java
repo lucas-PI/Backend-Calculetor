@@ -5,6 +5,7 @@ public class Calculadora {
     private double res;
     private Operacoes tipoOperacao;
     private String identificador;
+    private String desliga;
 
 
     public Calculadora(){
@@ -50,5 +51,13 @@ public class Calculadora {
 
     public void setIdentificador(String identificador) {
         this.identificador = identificador;
+    }
+
+    public String getDesliga() {
+        return desliga;
+    }
+
+    public void setDesliga(String desliga) {
+        this.desliga = desliga;
     }
 }
